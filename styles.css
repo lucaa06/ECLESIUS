@@ -1,0 +1,226 @@
+body {
+  background-color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+/* Contact bubbles */
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  color: #000;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+ 
+}
+
+.circle i {
+  font-size: 1.1rem;
+}
+
+/* Banner */
+.banner-box {
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  border-radius: 15px;
+  font-size: 0.9rem;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Contacts limit width */
+.contacts-wrapper {
+  max-width: 600px;
+}
+
+/* Animated button */
+.animated-btn {
+  position: relative;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 50px;
+  padding: 0.8rem 2.5rem;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+
+.animated-btn::before {
+  content: '';
+  position: absolute;
+  background: radial-gradient(circle, #ff9800, #f44336);
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+a{
+  transition: 0.5s ease-in-out;
+}
+a:hover{
+  color: whitesmoke;
+  background: radial-gradient(circle, #ff9800, #f44336);
+}
+.animated-btn:hover {
+  transform: scale(1.1);
+}
+
+.animated-btn:hover::before {
+  opacity: 1;
+}
+/* Neon glow effect */
+.neon-glow {
+  box-shadow: 0 0 15px #00f2ff, 0 0 30px #00f2ff, 0 0 45px #00f2ff;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+/* Ripple effect */
+.animated-btn {
+  position: relative;
+  overflow: hidden;
+}
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 152, 0, 0.5);
+  width: 100px;
+  height: 100px;
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+@keyframes ripple {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Terminal-style animated alert */
+.terminal-box {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  color: rgb(87, 2, 2);
+  padding: 1rem 1.5rem;
+  font-family: 'Courier New', monospace;
+  border: 2px solid rgb(255, 0, 0);
+  z-index: 9999;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 8, 0, 0.527);
+  max-width: 80%;
+}
+.terminal-box button{
+  border-radius: 20px;
+  transition: 0.5s ease-in-out;
+}
+.terminal-box button:hover{
+  border-radius: 10px;
+  background: #ff0000;
+  color: white;
+}
+/* Easter Egg 1: rotating logo */
+.rotate-logo {
+  animation: rotateLogo 2s ease-in-out;
+}
+
+@keyframes rotateLogo {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+/* Easter Egg 2: Emoji rain */
+.emoji-rain {
+  position: fixed;
+  top: 0;
+  font-size: 2rem;
+  z-index: 9999;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+/* Easter Egg 3: Rainbow title effect */
+.rainbow-text {
+  transition: 0.4s ease-in-out;
+  animation: rainbow 3s linear infinite;
+  letter-spacing: 20px;
+  text-shadow: -1px 0 #ffffff, 0 1px #f8f8f8, 1px 0 #ffffff, 0 -1px #ffffff;
+}
+
+@keyframes rainbow {
+  0% { color: red; }
+  20% { color: orange; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+  40% { color: yellow; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+  60% { color: green; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+  80% { color: rgb(108, 108, 197); font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+  100% { color: violet;font-family: fantasy; }
+}
+/* Easter Egg button */
+.easter-egg-button {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 999;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.easter-egg-button:hover {
+  background-color: #ffeb3b;
+  transform: scale(1.2) rotate(20deg);
+}
+
+/* Easter Egg popup */
+.easter-egg-popup {
+  position: fixed;
+  top: 60px;
+  right: 15px;
+  background: #fff;
+  border: 2px solid #000;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-width: 300px;
+  z-index: 998;
+}
+
+.easter-egg-popup ul {
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+}
