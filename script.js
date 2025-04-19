@@ -56,7 +56,7 @@ if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
               clearInterval(deleteEffect);
   
               // Nuovo messaggio da scrivere
-              const newMsg = "Scherzo... :)                                               il bottone è questo:";
+              const newMsg = "Scherzo... :)                              il bottone è questo:";
               let k = 0;
   
               const writeNew = setInterval(() => {
@@ -70,7 +70,7 @@ if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
                   realBtn.textContent = "inviami una mail";
                   realBtn.className = 'link-button';
                   realBtn.onclick = () => {
-                    window.location.href = "mailto:lucacutrono06@gmail.com?subject=mi%20serve%20un%20sito%20web&body=ciao%20ECLESIUS,%0Ami%20serve%20che%20mi%20crei%20un%20sito%20web!";
+                    window.location.href = "mailto:lucacutrono06@gmail.com?subject=mi%20serve%20un%20sito%20web&body=ciao%20NEXORA,%0Ami%20serve%20che%20mi%20crei%20un%20sito%20web!";
                   };
   
                   terminalBox.appendChild(document.createElement('br'));
